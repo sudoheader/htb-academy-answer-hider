@@ -1,0 +1,43 @@
+/* --- Toggle Button Styling --- */
+
+#htb-toggle-answers-btn {
+  /* Fixed position relative to the viewport */
+  position: fixed;
+
+  /* Adjusted position - Moved up 200px from original 20px */
+  /* Test this value on both Academy and Enterprise pages */
+  bottom: 220px;
+  right: 20px;
+
+  /* Ensure it appears above most page elements */
+  z-index: 10000;
+
+  /* Button appearance */
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #1a73e8; /* Default blue */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+
+  /* Smooth transitions for hover effects and potential position changes */
+  transition: background-color 0.2s ease, bottom 0.3s ease;
+}
+
+/* Darker blue on hover */
+#htb-toggle-answers-btn:hover {
+  background-color: #155ab6;
+}
+
+/* Style for when answers are VISIBLE (button turns red) */
+#htb-toggle-answers-btn.answers-visible {
+  background-color: #d93025; /* Red */
+}
+
+/* Darker red on hover when answers are visible */
+#htb-toggle-answers-btn.answers-visible:hover {
+  background-color: #a52714;
+}

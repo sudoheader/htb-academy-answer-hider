@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "HTB Academy/Enterprise Answer Hider",
+  "version": "1.3",
+  "description": "Hides exercise answer values on Hack The Box Academy and Enterprise pages and allows toggling visibility.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://academy.hackthebox.com/module/*/section/*",
+	"https://enterprise.hackthebox.com/academy-lab/*/*/modules/*/*"
+        ],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
